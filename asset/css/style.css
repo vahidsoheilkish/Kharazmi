@@ -1,0 +1,800 @@
+body{
+	overflow-x: hidden !important;
+}
+
+.todo-entry{
+    display: flex;
+    direction:ltr;
+    flex-direction:row;
+}
+
+.todo-entry li{
+    display: inline-block;
+    border-left:1px solid #444;
+    padding:10px;
+}
+
+
+.todo-entry li:nth-child(1){
+    width:20%;
+}
+
+.todo-entry li:nth-child(2){
+    width:70%;
+}
+
+.todo-entry li:nth-child(3){
+   width:200px;
+    min-width: 200px;
+}
+
+.todo-entry.done{
+    background-color: #4cae4c;
+}
+
+.todo-entry.pending{
+    background-color: #e4606d;
+}
+
+.menu-bar{
+	position: fixed;
+	width:100%;
+	padding-top:1px;
+	padding-bottom: 2px;
+	border:0;
+	background-color: #a7a7a7;
+	color:#000;	
+}
+
+.menu-bar span{
+	padding:5px;
+	display: inline-block;
+}
+
+.tac{
+	text-align: center;
+}
+
+
+#adv{
+    border-radius: 9px;
+    background: url('http://nezami.asanrank.ir/image/adv.png') no-repeat center;
+    background-size:cover;
+    height:300px;
+    margin-top:50px;
+}
+
+#dialog-display{
+    width:40%;
+    height:auto;
+    min-width:40%;
+    min-height:100px;
+    position:fixed;
+    top:30%;
+    background-color:#8f98fb;
+    color:#000;
+    z-index:9999;
+    opacity:0.9;
+    left:29%;
+    border-radius:35px;
+    box-shadow:2px 3px 3px gray;
+    display:none;
+}
+
+#welcome-message{
+    text-align:center;
+    background:url("http://nezami.asanrank.ir/image/label.png") center no-repeat;
+    background-size:cover;
+    padding:10px 20px 10px 20px;
+    margin:10px;
+    margin-bottom:12px;
+    margin-left:0px;
+    vertical-align:middle;
+    border-radius:10px;
+    box-shadow:1px 1px 1px gray;
+}
+
+#dialog-message{
+    text-align:center;
+    direction:rtl;
+    margin:10px;
+    line-height: 35px;
+    color:#ffffff;
+}
+
+#img-close:hover{
+    cursor:pointer;
+}
+
+#loader-wrapper{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999 !important;
+    background: url('http://nezami.asanrank.irimage/loading.gif') center;
+    background-repeat: no-repeat;
+}
+
+#success-register{
+        width:60%;
+        padding:20px;
+        border-radius:10px;
+        box-shadow:3px 3px 3px gray;
+        margin:40px auto;
+        direction:rtl;
+        text-align:center;
+    }
+    
+    #failed-register{
+        width:60%;
+        padding:20px;
+        border-radius:10px;
+        box-shadow:3px 3px 3px gray;
+        margin:40px auto;
+        direction:rtl;
+        text-align:center;
+    }
+
+.vertical-middle{
+    vertical-align: middle;
+}
+
+.tac{
+    text-align:center;
+}
+
+
+#contain{
+    box-shadow:1px 2px 4px #565656;
+    background-color: #eeeeee;
+    color:black;
+    border-radius: 10px;
+    direction:rtl;
+    margin-top:15px;
+    text-align: right;
+    height: auto;
+}
+
+[placeholder]{
+
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    outline: none;
+    border: none;
+}
+
+textarea:focus, input:focus {
+    border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #adadad;}
+input:-moz-placeholder { color: #adadad;}
+input::-moz-placeholder { color: #adadad;}
+input:-ms-input-placeholder { color: #adadad;}
+
+textarea::-webkit-input-placeholder { color: #adadad;}
+textarea:-moz-placeholder { color: #adadad;}
+textarea::-moz-placeholder { color: #adadad;}
+textarea:-ms-input-placeholder { color: #adadad;}
+
+/*---------------------------------------------*/
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none !important;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Utility ]*/
+.txt1 {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.txt2 {
+    font-size: 13px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-login100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #f2f2f2;
+}
+
+.wrap-login100 {
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+/*------------------------------------------------------------------
+[ Form ]*/
+
+.login100-form {
+    width: 100%;
+}
+
+.login100-form-title {
+    display: block;
+    font-size: 30px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+}
+.login100-form-title i {
+    font-size: 60px;
+}
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 10px;
+
+}
+
+.input100 {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    background: transparent;
+    padding: 0 5px;
+    margin-top:10px;
+}
+
+/*---------------------------------------------*/
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+
+    background: #6a7dfe;
+    background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(left, #21d4fd, #b721ff);
+    background: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+.focus-input100::after {
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.2;
+
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    padding-left: 5px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.input100:focus + .focus-input100::after {
+    top: -15px;
+}
+
+.input100:focus + .focus-input100::before {
+    width: 100%;
+}
+
+.has-val.input100 + .focus-input100::after {
+    top: -15px;
+}
+
+.has-val.input100 + .focus-input100::before {
+    width: 100%;
+}
+
+/*---------------------------------------------*/
+.btn-show-pass {
+    font-size: 15px;
+    color: #999999;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    cursor: pointer;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.btn-show-pass:hover {
+    color: #6a7dfe;
+    color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+    color: -o-linear-gradient(left, #21d4fd, #b721ff);
+    color: -moz-linear-gradient(left, #21d4fd, #b721ff);
+    color: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+.btn-show-pass.active {
+    color: #6a7dfe;
+    color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+    color: -o-linear-gradient(left, #21d4fd, #b721ff);
+    color: -moz-linear-gradient(left, #21d4fd, #b721ff);
+    color: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 13px;
+    padding-bottom:12px;
+}
+
+.wrap-login100-form-btn {
+    width: 50%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.login100-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: #a64bf4;
+    background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    top: 0;
+    left: -100%;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.login100-form-btn {
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 40px;
+}
+
+.wrap-login100-form-btn:hover .login100-form-bgbtn {
+    left: 0;
+}
+
+#log{
+    background: url("http://nezami.asanrank.ir/image/ins.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:10px;
+}
+
+#menu-bar{
+    background : #000000;
+    box-shadow:2px 2px 2px gray;
+    padding:0;
+}
+
+#search-wrapper{
+    margin:30px 0px 0px 10px;
+}
+
+.log-helper{
+    color: #e2d400;
+    font-size:12px;
+	float:right;
+}
+
+.right{
+	float:right;
+}
+
+.left{
+	float:left;
+}
+
+#login{
+    background: url("http://nezami.asanrank.ir/image/login-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:1px 1px 2px #000;
+    direction:rtl;
+    margin:0;
+    border-radius:0px;
+    box-shadow:3px 3px 5px gray;
+    border-radius: 5px;
+}
+
+#exit{
+    margin:auto;
+    text-align:center;
+    padding-bottom:50px;
+}
+
+#slider{
+	
+}
+
+.btn-grad{
+    background: -webkit-linear-gradient(right, #21d4fd, #b721ff);
+    color:#fff;
+    font-size:15px;
+    border:none;
+    outline:none;
+}
+
+.btn-grad:hover{
+    color:#fff;
+}
+
+.input-trans{
+    background: transparent;
+    border:none;
+    outline:none;
+    width:100%;
+}
+
+.down-border{
+    border-bottom: 2px solid #2b2b2b;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+
+#sidebar{
+    background-color: lightgray;
+    color:black;
+    border-radius: 10px;
+    padding:14px;
+    text-align: center;
+    margin-top:4px;
+}
+
+
+#footer{
+    background-color: #262626;
+    color:#ddd;
+    padding:13px 0px 10px 0px;
+}
+
+
+.btn-search{
+    width:40px;
+    height:40px;
+    color:#000;
+    font-size:16px;
+    direction:ltr;
+    background: url('http://nezami.asanrank.ir/image/search.gif') 3% no-repeat;
+    border-radius:30px;
+    background-size: contain;
+    vertical-align: middle;
+    margin:0 5px;
+    
+}
+
+#login > input:focus{
+    animation-name: focus-input;
+    animation-duration:1s;
+}
+
+@keyframes focus-input{
+    from{
+        text-align: left;
+    }
+    to{
+        text-align: right;
+    }
+}
+
+#menu-bar ul{
+    float:right;
+    margin-right:55px;
+}
+
+#menu-bar ul > li{
+    float:right;
+}
+
+.img-chain{
+    float:left;
+    clear:both;
+    width:22px;
+    height:50px;
+}
+
+.post{
+	padding:10px;
+}
+
+.post-text{
+    font-size: 13px;
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+	line-height: 27px;
+}
+.post-image{
+	float: right;
+    width: 100px;
+	height: 100px;
+	margin-left: 5px;
+	border: 1px solid #AFAFAF;
+	border-radius: 10px;
+}
+
+.post-header{
+    color:slateblue;
+    padding:4px;
+    margin:10px 0px 0px 0px;
+	font-family: sans_bold;
+	font-size: 17px;
+}
+
+.btn-green{
+    background-color: #82b346;
+    color:#ddd;
+    border:1px dotted #4cae4c;
+    border-radius:3px;
+    box-shadow:1px 1px 2px #82b346;
+}
+
+.btn-green:hover{
+    background-color: #4E8227;
+    color:#ddd;
+}
+
+#news{
+    background: linear-gradient(#888888,#9a9a9a);
+    direction:ltr;
+    line-height: 33px;
+    text-align: right;
+}
+
+.header_news{
+    background-color:#08707f;
+	padding: 5px 20px 7px 20px;
+	color: #e2e2e2;
+	border-radius: 10px;
+	direction: rtl;
+	text-align: right;
+	font-family: sans_bold;
+	font-size: 16px;
+}
+.header_news2{
+    background-color:#08707f;
+	padding: 5px 20px 7px 20px;
+	color: #e2e2e2;
+	border-radius: 10px 10px 0px 0px;
+	direction: rtl;
+	text-align: right;
+	font-family: sans_bold;
+	font-size: 16px;
+}
+
+#accordion h3{
+    padding:5px 22px 5px 0px;
+    vertical-align: middle;
+    border-radius: 40px 30px 0px 0px;
+}
+
+.head-new{
+    margin-right: 10px;
+    color:yellow;
+    font-size:20px;
+}
+
+#accordion span:hover{
+    transition: all outline .3;
+}
+
+.news-text{
+    font-size:14px;
+    padding:5px;
+    color:#000000;
+    border-radius: 3px;
+    margin:5px;
+
+}
+
+
